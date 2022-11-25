@@ -22,7 +22,9 @@ const Checkout = () => {
   }, []);
 
   const fetchStripe = async () => {
-    const res = await axios.post(process.env.REACT_APP_STRIPE_API);
+    const res = await axios.post(
+      "https://flax-helpful-andesaurus.glitch.me/create-payment-intent"
+    );
     setClientSecret(res.data.clientSecret);
   };
   return (
