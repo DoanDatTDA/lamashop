@@ -54,7 +54,7 @@ export const CheckoutForm = () => {
     }
 
     const clientSecret = new URLSearchParams(window.location.search).get(
-      process.env.REACT_APP_STRIPE_CLIENT_SERET
+      "payment_intent_client_secret"
     );
 
     if (!clientSecret) {
