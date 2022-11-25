@@ -1,0 +1,17 @@
+@import "toastr";
+a {
+  text-decoration: none;
+  color: #000;
+}
+* {
+  scroll-behavior: smooth;
+}
+.MuiDataGrid-root .MuiDataGrid-columnHeaderTitleContainer {
+  justify-content: center;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell--textLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
