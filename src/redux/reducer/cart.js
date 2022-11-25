@@ -59,8 +59,6 @@ export const cartSlice = createSlice({
       }
       return state;
     },
-    clearCart: (state) => {
-      state = [];
-    },
+    clearCart: (state, action) => (state = []),
   },
 });
