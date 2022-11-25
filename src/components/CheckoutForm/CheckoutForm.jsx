@@ -35,6 +35,10 @@ const useStyle = makeStyles((theme) => ({
       width: "80%",
     },
   },
+  loading: {
+    display: "flex",
+    justifyContent: "center",
+  },
 }));
 
 export const CheckoutForm = () => {
@@ -123,7 +127,9 @@ export const CheckoutForm = () => {
           {message && <div id="payment-message">{message}</div>}
         </form>
       ) : (
-        <CircularProgress />
+        <div className={classes.loading}>
+          <CircularProgress />
+        </div>
       )}
     </div>
   );
