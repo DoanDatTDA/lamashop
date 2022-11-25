@@ -106,31 +106,25 @@ export const CheckoutForm = () => {
 
   return (
     <div className={classes.container}>
-      {isLoading ? (
-        <form id="payment-form" onSubmit={handleSubmit}>
-          <PaymentElement id="payment-element" />
-          <button
-            disabled={isLoading || !stripe || !elements}
-            id="submit"
-            className={classes.button}
-          >
-            <span id="button-text">
-              {isLoading ? (
-                <div className="spinner" id="spinner">
-                  Loading....
-                </div>
-              ) : (
-                "Pay now"
-              )}
-            </span>
-          </button>
-          {message && <div id="payment-message">{message}</div>}
-        </form>
-      ) : (
-        <div className={classes.loading}>
-          <CircularProgress />
-        </div>
-      )}
+      <form id="payment-form" onSubmit={handleSubmit}>
+        <PaymentElement id="payment-element" />
+        <button
+          disabled={isLoading || !stripe || !elements}
+          id="submit"
+          className={classes.button}
+        >
+          <span id="button-text">
+            {isLoading ? (
+              <div className="spinner" id="spinner">
+                Loading....
+              </div>
+            ) : (
+              "Pay now"
+            )}
+          </span>
+        </button>
+        {message && <div id="payment-message">{message}</div>}
+      </form>
     </div>
   );
 };
